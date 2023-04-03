@@ -2,7 +2,7 @@ node {
     def app
     stage('Clone repository') {
         checkout scm
-	
+    }	
     if(env.BRANCH_NAME == 'dev'){
    	stage('Build image') {
        		app = docker.build("stefanbatandjiev/kiii-jenkins")
